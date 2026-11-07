@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wildlife around Wormit, Fife</title>
+<style>
+:root{
+  --bg:#eef1ec; --surface:#fbfcfa; --ink:#1e2a2e; --muted:#58676b; --line:#cdd6d0;
+  --estuary:#2f5d6e; --wood:#4c6b3a; --heath:#8a5a7a; --accent:#2f5d6e;
+  --winter:#d9e6ee; --spring:#e3efd6; --summer:#f6ecc9; --autumn:#f1dccb; --all:#e4e4e4;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141b1d; --surface:#1c2629; --ink:#e4ebe8; --muted:#9db0b0; --line:#34454a; --accent:#8cc3d6;
+  --winter:#25414f; --spring:#2f4326; --summer:#4a4122; --autumn:#4d3526; --all:#33393b;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Iowan Old Style",serif;}
+header{padding:3rem 1.25rem 1.5rem;max-width:62rem;margin:auto}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin:0 0 .6rem;letter-spacing:-.01em}
+header p{max-width:40rem;color:var(--muted);margin:0}
+main{max-width:62rem;margin:auto;padding:0 1.25rem 3rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0;align-items:center;font-family:system-ui,sans-serif;font-size:.9rem}
+.filters span{color:var(--muted);margin-right:.25rem}
+button{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:.35rem .85rem;border-radius:2rem;cursor:pointer}
+button[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.place{background:var(--surface);border:1px solid var(--line);border-left:8px solid var(--c);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.place h2{margin:0;font-size:1.5rem}
+.where{font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted);margin:.15rem 0 .75rem}
+.place p{margin:.25rem 0 1rem;max-width:44rem}
+ul.sp{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.6rem}
+ul.sp li{padding:.55rem .75rem;border-radius:4px;font-family:system-ui,sans-serif;font-size:.92rem;line-height:1.4}
+ul.sp b{display:block;font-family:Georgia,serif;font-size:1rem}
+ul.sp small{color:var(--muted)}
+li[data-s~="winter"]{background:var(--winter)} li[data-s~="spring"]{background:var(--spring)}
+li[data-s~="summer"]{background:var(--summer)} li[data-s~="autumn"]{background:var(--autumn)}
+li[data-s="all"]{background:var(--all)}
+li[hidden]{display:none}
+.tip{font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted);margin:1rem 0 0;border-top:1px solid var(--line);padding-top:.6rem}
+footer{max-width:62rem;margin:auto;padding:0 1.25rem 3rem;font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Wildlife around Wormit</h1>
+  <p>Wormit sits on the south shore of the Firth of Tay, in the shadow of the two Tay bridges. Mudflats, wooded burns and open farmland all sit within a short walk, so the mix of birds and mammals changes a lot with the tide and the time of year.</p>
+</header>
+<main>
+  <div class="filters" role="group" aria-label="Filter by season">
+    <span>Show what is likely in:</span>
+    <button aria-pressed="true" data-f="all">Any season</button>
+    <button aria-pressed="false" data-f="spring">Spring</button>
+    <button aria-pressed="false" data-f="summer">Summer</button>
+    <button aria-pressed="false" data-f="autumn">Autumn</button>
+    <button aria-pressed="false" data-f="winter">Winter</button>
+  </div>
+
+  <section class="place" style="--c:var(--estuary)">
+    <h2>Wormit shore and the Tay Bridge views</h2>
+    <div class="where">Estuary foreshore, west of Wormit Bay towards the rail bridge</div>
+    <p>The tidal flats here are part of the Firth of Tay, a protected wildfowl and wader area. Come on a falling or rising tide and the edge of the mud fills with birds.</p>
+    <ul class="sp">
+      <li data-s="autumn winter"><b>Redshank and curlew</b><small>Probing the mud at low tide</small></li>
+      <li data-s="autumn winter"><b>Oystercatcher and dunlin</b><small>Often in big, shifting flocks</small></li>
+      <li data-s="autumn winter"><b>Eider, goldeneye, red-breasted merganser</b><small>Diving ducks out in the channel</small></li>
+      <li data-s="winter"><b>Pink-footed geese</b><small>Skeins flying over at dawn and dusk</small></li>
+      <li data-s="all"><b>Common seal</b><small>Hauled out on sandbanks, more often seen further down the estuary</small></li>
+      <li data-s="spring summer"><b>Sandwich and common tern</b><small>Fishing off the shore</small></li>
+      <li data-s="all"><b>Grey heron and cormorant</b><small>Standing on the shoreline and bridge piers</small></li>
+      <li data-s="all"><b>Gulls</b><small>Black-headed, herring and common gulls all year</small></li>
+    </ul>
+    <p class="tip">Tip: aim for about two hours either side of high tide, when birds are pushed close to the sea wall.</p>
+  </section>
+
+  <section class="place" style="--c:var(--wood)">
+    <h2>Wormit Burn and Wormit Hill woodland</h2>
+    <div class="where">Wooded dens and paths behind the village</div>
+    <p>Mixed broadleaf woodland and the burn's gully give shelter for woodland birds and small mammals. It is quietest early in the morning.</p>
+    <ul class="sp">
+      <li data-s="all"><b>Roe deer</b><small>Dawn and dusk along woodland edges</small></li>
+      <li data-s="all"><b>Great spotted woodpecker</b><small>Listen for drumming in spring</small></li>
+      <li data-s="all"><b>Treecreeper, long-tailed tit, goldcrest</b><small>Often in mixed flocks</small></li>
+      <li data-s="spring summer"><b>Blackcap, chiffchaff, willow warbler</b><small>Summer visitors singing from the canopy</small></li>
+      <li data-s="all"><b>Dipper or grey wagtail</b><small>On rocks in the burn, where water is fast and clean</small></li>
+      <li data-s="spring"><b>Bluebells, wood anemone, wild garlic</b><small>Woodland flowers from April</small></li>
+      <li data-s="summer autumn"><b>Fungi</b><small>Fly agaric and other species after wet weather</small></li>
+      <li data-s="all"><b>Badger and fox</b><small>Mostly signs: tracks, latrines, diggings</small></li>
+    </ul>
+  </section>
+
+  <section class="place" style="--c:var(--wood)">
+    <h2>Tay Road Bridge and Newport foreshore</h2>
+    <div class="where">The Fife landing of the road bridge and the shore towards Newport-on-Tay</div>
+    <p>Close to the bridge piers the current is strong, which draws fish and the animals that hunt them. Viewpoints along the path are good for scanning the water.</p>
+    <ul class="sp">
+      <li data-s="spring summer"><b>Bottlenose dolphin</b><small>Occasionally seen in the Tay, more regularly nearer Broughty Ferry</small></li>
+      <li data-s="all"><b>Grey seal</b><small>Heads popping up in the channel</small></li>
+      <li data-s="spring summer autumn"><b>Salmon and sea trout</b><small>Migrating up the Tay, rarely seen directly</small></li>
+      <li data-s="all"><b>Peregrine falcon</b><small>Hunting waders and pigeons around the bridge structures</small></li>
+      <li data-s="winter"><b>Long-tailed duck and scoter</b><small>Rarer winter ducks further out</small></li>
+      <li data-s="all"><b>Otter</b><small>Occasional on quiet shorelines at dawn; a lucky sighting</small></li>
+    </ul>
+    <p class="tip">Tip: bring binoculars and scan slowly. Seal heads and dolphin fins are easy to miss on a choppy Tay.</p>
+  </section>
+
+  <section class="place" style="--c:var(--heath)">
+    <h2>Farmland and hedgerows toward Balmerino</h2>
+    <div class="where">Field edges, hedges and lanes west of Wormit</div>
+    <p>Arable fields and scrub corridors support birds that have declined elsewhere. They are best in late summer and through the winter stubble.</p>
+    <ul class="sp">
+      <li data-s="all"><b>Yellowhammer and linnet</b><small>On hedge tops and fence posts</small></li>
+      <li data-s="all"><b>Buzzard and kestrel</b><small>Hovering or soaring above the fields</small></li>
+      <li data-s="winter"><b>Fieldfare and redwing</b><small>Winter thrushes stripping berries from hedges</small></li>
+      <li data-s="winter"><b>Geese and whooper swans</b><small>Grazing on stubble and winter crops</small></li>
+      <li data-s="spring summer"><b>Skylark</b><small>Song-flight over open fields</small></li>
+      <li data-s="spring summer"><b>Brown hare</b><small>Spring is the time for boxing hares</small></li>
+      <li data-s="summer"><b>Butterflies</b><small>Peacock, small tortoiseshell, meadow brown</small></li>
+      <li data-s="summer"><b>Barn owl</b><small>Possible at dusk along rough grass edges</small></li>
+    </ul>
+  </section>
+
+  <section class="place" style="--c:var(--estuary)">
+    <h2>Further afield: Tentsmuir and Lindores Loch</h2>
+    <div class="where">Short drives from Wormit; Tentsmuir is across the Tay at Tayport</div>
+    <p>Not on Wormit's doorstep but worth the trip. Tentsmuir National Nature Reserve has pine forest, dunes and a seal haul-out, while Lindores Loch is a small loch popular with wildfowl.</p>
+    <ul class="sp">
+      <li data-s="all"><b>Common and grey seals at Tentsmuir Point</b><small>Hundreds can gather on the sandbars</small></li>
+      <li data-s="all"><b>Red squirrel</b><small>In the pine forest at Tentsmuir</small></li>
+      <li data-s="winter"><b>Whooper swans and wigeon</b><small>On Lindores Loch</small></li>
+      <li data-s="spring summer"><b>Dune plants and orchids</b><small>Flowering from late spring</small></li>
+      <li data-s="winter"><b>Waxwing</b><small>Irregular winter visitors; check local sightings</small></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  This guide shows species that are commonly or possibly recorded in this area, not guaranteed sightings. Check recent sightings on local birding groups, follow the Countryside Code, keep dogs under control and give seals and nesting birds plenty of space. Tide times and a local map are worth checking before you go.
+</footer>
+<script>
+const btns=document.querySelectorAll('.filters button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  document.querySelectorAll('ul.sp li').forEach(li=>{
+    const s=li.dataset.s.split(' ');
+    li.hidden=!(f==='all'||s.includes(f)||s.includes('all'));
+  });
+}));
+</script>
+</body>
+</html>
